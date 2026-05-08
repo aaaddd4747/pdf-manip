@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="900"
+        x:Class="pdf_manip.MainWindow"
+        Title="pdf_manip">
+    <StackPanel >
+        <Border Margin="5" CornerRadius="20" Background="LightBlue">
+            <TextBlock HorizontalAlignment="Center" Margin="5" FontSize="24">
+                PDF Combobulator
+            </TextBlock>
+        </Border>
+        <Grid Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" RowSpacing="10" ColumnSpacing="10" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto,Auto">
+            <Button     Grid.Row="0" Grid.Column="0" Name="src1" Click="Button_on_click" >source 1</Button>    
+            <TextBlock  Grid.Row="0" Grid.Column="1" Name="txt1" VerticalAlignment="Center" Text="[no file selected]"/>
+            <Button     Grid.Row="1" Grid.Column="0" Name="src2" Click="Button_on_click">source 2</Button>    
+            <TextBlock  Grid.Row="1" Grid.Column="1" Name="txt2" VerticalAlignment="Center" Text="[no file selected]"/>
+            <Button     Grid.Row="2" Grid.Column="0" Name="exec" Click="Run_job">execute</Button>
+            <TextBlock  Grid.Row="2" Grid.Column="1" Name="txt3" VerticalAlignment="Center" Text="[idle]"/>
+        </Grid>
+        <ProgressBar Margin="10" MinHeight="20"></ProgressBar>
+    </StackPanel>
+</Window>
